@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.7.0"></script>
+  <!-- <script type="module" src="./js/predict.js"></script> -->
+</head>
+<body>
+  
+  <input type="file" id="fileLoad" accept="image/*" onchange="loadFile(event)">
+  <img id="img" src="">
+
+  <button id="start">START</button>
+
+  <canvas id="destination"></canvas>
+
+  <script type="module">
+    function go(){
+      predict().then(() => {
+        console.log("NAISU")
+      })
+    }
+    import {predict} from './js/predict.js'
+    const button = document.getElementById("start")
+    button.onclick = go
+  </script>
+  <script>
+    var loadFile = function(event) {
+      var output = document.getElementById('img');
+      output.src = URL.createObjectURL(event.target.files[0]);
+      output.onload = function() {
+        console.log(output.width)
+        URL.revokeObjectURL(output.src) // free memory
+      }
+    };
+  </script>
+  <!-- <script type="module">
+
+    async function predit(){
+      
+      const model = await tf.loadLayersModel(`http://localhost:3000/api/models/classify`)
+      const img = document.getElementById("img")
+      const example = tf.expandDims(tf.browser.fromPixels(img).resizeBilinear([224,224]),0)
+      let prediction = model.predict(example)
+      prediction = prediction.squeeze()
+      prediction = prediction.round()
+
+      const canvas = document.createElement('CANVAS');
+      canvas.width = prediction.shape.width
+      canvas.height = prediction.shape.height
+      await tf.browser.toPixels(prediction, canvas);
+      document.body.appendChild(canvas)
+      
+      console.log(prediction)
+
+    }
+    
+  </script> -->
+
+</body>
+</html>
