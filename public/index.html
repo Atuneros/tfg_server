@@ -6,17 +6,36 @@
   <title>Page Title</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.7.0"></script>
+  <link rel="stylesheet" href="css/styles.css">
   <!-- <script type="module" src="./js/predict.js"></script> -->
 </head>
 <body>
   
-  <input type="file" id="fileLoad" accept="image/*" onchange="loadFile(event)">
-  <img id="img" src="">
+  <header>
+    PROYECTO TEJADOS 2
+  </header>
 
-  <button id="start">START</button>
-
-  <canvas id="destination"></canvas>
-
+  <div id="content">
+    <div>
+      <div class="row2">
+        <input type="file" id="fileLoad" accept="image/*" onchange="loadFile(event)">
+      </div>
+      <div class="row2">
+        <button id="start">START</button>
+      </div>
+    </div>
+    <div class="row1">
+      <div class="origin">
+        <img id="img" src="">
+      </div>
+      <div class="destination">
+        <canvas id="destination"></canvas>
+      </div>
+    </div>
+    
+  </div>
+   
+    
   <script type="module">
     function go(){
       predict().then(() => {
