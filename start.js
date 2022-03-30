@@ -13,8 +13,6 @@ const corsOptions = {
 app.use(cors(corsOptions))
 app.options('*', cors(corsOptions))
 
-app.use('/', require('./routes'))
-
 app.use(
   "/home",
   express.static(path.join(__dirname, "public"))
