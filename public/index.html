@@ -32,15 +32,13 @@
         <canvas id="destination"></canvas>
       </div>
     </div>
-    
+    <a href="http://localhost:30200/">HOLA MUNDO</a>
   </div>
    
     
   <script type="module">
     function go(){
-      predict().then(() => {
-        console.log("NAISU")
-      })
+      predict()
     }
     import {predict} from './js/predict.js'
     const button = document.getElementById("start")
@@ -51,7 +49,6 @@
       var output = document.getElementById('img');
       output.src = URL.createObjectURL(event.target.files[0]);
       output.onload = function() {
-        console.log(output.width)
         URL.revokeObjectURL(output.src) // free memory
       }
     };
