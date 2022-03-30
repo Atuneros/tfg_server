@@ -3,7 +3,7 @@ const path = require("path")
 const cors = require("cors")
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 30200
 
 const corsOptions = {
   origin: "https://localhost.com",
@@ -14,7 +14,7 @@ app.use(cors(corsOptions))
 app.options('*', cors(corsOptions))
 
 app.use(
-  "/home",
+  "/",
   express.static(path.join(__dirname, "public"))
 )
 

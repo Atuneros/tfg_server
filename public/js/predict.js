@@ -1,5 +1,5 @@
 export async function predict(){
-  const model = await tf.loadLayersModel(`http://localhost:3000/api/models/classify`)
+  const model = await tf.loadLayersModel(`http://localhost:30200/api/models/classify`)
   const img = document.getElementById("img")
   const example = tf.expandDims(tf.browser.fromPixels(img).resizeBilinear([224,224]),0)
   let prediction = model.predict(example)

@@ -7,7 +7,7 @@ RUN npm install --production
 
 COPY . /app
 
-EXPOSE 3000
+EXPOSE 30200
 
 CMD [ 'cd', 'app' ]
 
