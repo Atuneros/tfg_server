@@ -23,6 +23,19 @@ img{
     text-align: center;
 }
 
+#start{
+    border-radius: 10px;
+    padding: 20px;
+    transition: background-color 0.25s ease-in-out;
+    background-color: #5FDD9D;
+}
+
+#start:hover{
+    cursor: pointer;
+    background-color: #499167;
+    transition: background-color 0.25s ease-in-out;
+}
+
 .row1{
     display: inline-block;
     margin: 10px;
@@ -43,3 +56,35 @@ img{
     width: 250px;
     height: 250px;
 }
+
+#fileLoad{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#fileLoad + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+#fileLoad:focus + label,
+#fileLoad + label:hover {
+    background-color: red;
+}
+
+#fileLoad + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+#fileLoad:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
