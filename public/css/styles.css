@@ -69,14 +69,16 @@ img{
 #fileLoad + label {
     font-size: 1.25em;
     font-weight: 700;
-    color: white;
-    background-color: black;
+    color: black;
+    border: 1px solid;
     display: inline-block;
+    transition: background-color 0.25s ease-in-out;
 }
 
 #fileLoad:focus + label,
 #fileLoad + label:hover {
-    background-color: red;
+    background-color: #F3C879;
+    transition: background-color 0.25s ease-in-out;
 }
 
 #fileLoad + label {
