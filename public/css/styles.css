@@ -11,12 +11,17 @@ header{
     background-color: #3954ad;
     margin-bottom: 15px;
     box-shadow: 0px 5px #193180;
-    padding: 10px 10px 10px 300px;
+    padding: 10px 10px 10px 350px;
 }
 
 img{
     max-width: 250px;
     max-height: 250px;
+}
+
+#logo{
+    width: 40px;
+    height: 35px;
 }
 
 #content{
