@@ -1,17 +1,17 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
-    background-color: wheat;
+    background-color: #e6e6e6;
 }
 
 header{
-    color: #3F4531;
-    text-align: center;
+    color: white;
+    text-align: left;
     font-size: 48px;
-    background-color: #5FDD9D;
+    background-color: #3954ad;
     margin-bottom: 15px;
-    box-shadow: 0px 5px #499167;
-    padding: 10px;
+    box-shadow: 0px 5px #193180;
+    padding: 10px 10px 10px 300px;
 }
 
 img{
@@ -24,15 +24,18 @@ img{
 }
 
 #start{
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 50px;
+    padding: 15px 35px 15px 35px;
     transition: background-color 0.25s ease-in-out;
-    background-color: #5FDD9D;
+    background-color: #3954ad;
+    margin: 0 0 0 10px;
+    color: white;
+    font-weight: bold;
 }
 
 #start:hover{
     cursor: pointer;
-    background-color: #499167;
+    background-color: #193180;
     transition: background-color 0.25s ease-in-out;
 }
 
@@ -48,7 +51,7 @@ img{
 
 .row2{
     display: inline-block;
-    margin: 10px;
+    margin: 30px 0 0 10px;
 }
 
 #destination{
@@ -70,15 +73,16 @@ img{
     font-size: 1.25em;
     font-weight: 700;
     color: black;
-    border: 1px solid;
+    text-decoration: underline;
     display: inline-block;
-    transition: background-color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 #fileLoad:focus + label,
 #fileLoad + label:hover {
-    background-color: #F3C879;
-    transition: background-color 0.25s ease-in-out;
+    background-color: #3954ad;
+    color: white;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 #fileLoad + label {
